@@ -12,18 +12,21 @@ really a list containing a function to
 3.  set the value of the Inverse of the Matrix
 4.  get the value of the Inverse of the Matrix
 
+
+
 <!-- -->
 
-makeCacheMatrix <- function(x = matrix()) {
-  inverse <- NULL
 
-  #set and get methods for x
-  get <- function() x
-  set <- function(y){
-    #Note that we cached the data and initialise the inverse with null
-    x <<- y
-    inverse <<-NULL
-  }
+  makeCacheMatrix <- function(x = matrix()) {
+    inverse <- NULL
+  
+    #set and get methods for x
+    get <- function() x
+    set <- function(y){
+      #Note that we cached the data and initialise the inverse with null
+      x <<- y
+      inverse <<-NULL
+    }
 
 
   #set and get methods for inverse
