@@ -16,8 +16,7 @@ really a list containing a function to
 
 <!-- -->
 
-# makeCacheMatrix creates a special 'vector' object that contains a matrix and its inverse
-  makeCacheMatrix <- function(x = matrix()) {
+    makeVector <- function(x = numeric()) {
   
     inverse <- NULL
     #set and get methods for x
