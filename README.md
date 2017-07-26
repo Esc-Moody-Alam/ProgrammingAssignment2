@@ -27,12 +27,12 @@ really a list containing a function to
     }
 
 
-  #set and get methods for inverse
-  setInverse <-function(y) inverse <<- y
-  getInverse <- function() inverse
-
-  list(set = set, get = get, getInverse = getInverse, setInverse = setInverse)
-}
+    #set and get methods for inverse
+    setInverse <-function(y) inverse <<- y
+    getInverse <- function() inverse
+  
+    list(set = set, get = get, getInverse = getInverse, setInverse = setInverse)
+  }
 
 The following function calculates the inverse of the Matrix but before doing so ensures that the inverse has not already been computed.
 
@@ -58,10 +58,10 @@ Finally the Test it function makes it easy to test the above two functions.
 
 #This functions tests the above two functions.
 
-testit <- function()
-{
-  m<- matrix(c(3,2,2,3),2,2)
-  mc <- makeCacheMatrix(m)
-  print(cacheSolve(mc))
-  print(cacheSolve(mc))
-}
+    testit <- function()
+    {
+      m<- matrix(c(3,2,2,3),2,2)
+      mc <- makeCacheMatrix(m)
+      print(cacheSolve(mc))
+      print(cacheSolve(mc))
+    }
