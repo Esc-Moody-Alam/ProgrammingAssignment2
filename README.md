@@ -16,10 +16,10 @@ really a list containing a function to
 
 <!-- -->
 
-
+# makeCacheMatrix creates a special 'vector' object that contains a matrix and its inverse
   makeCacheMatrix <- function(x = matrix()) {
-    inverse <- NULL
   
+    inverse <- NULL
     #set and get methods for x
     get <- function() x
     set <- function(y){
