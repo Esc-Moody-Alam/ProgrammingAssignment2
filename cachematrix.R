@@ -1,8 +1,8 @@
-## This file has three function (1) makeCacheMatrix which creates a list that contains a matrix and its 'cached' inverse. 
-#(2) cacheSolve which computes the inverse of a matrix and caches it inside the passed 'list' object
+## This file has three function (1) makeCacheMatrix which creates a vector that contains a matrix and its 'cached' inverse. 
+#(2) cacheSolve which computes the inverse of a matrix and caches it inside the passed 'vector' object
 #(3) testit function which makes it easy to test the above two functions
 
-## makeCacheMatrix creates a special 'list' object that contains a matrix and its inverse
+## makeCacheMatrix creates a special 'vector' object that contains a matrix and its inverse
 
 makeCacheMatrix <- function(x = matrix()) {
   inverse <- NULL
