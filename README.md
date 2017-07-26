@@ -16,8 +16,7 @@ really a list containing a function to
 
 <!-- -->
 
-    makeVector <- function(x = numeric()) {
-  
+    makeCacheMatrix <- function(x = matrix()) {
     inverse <- NULL
     #set and get methods for x
     get <- function() x
@@ -37,22 +36,22 @@ really a list containing a function to
 
 The following function calculates the inverse of the Matrix but before doing so ensures that the inverse has not already been computed.
 
-cacheSolve <- function(x,...) {
-
-  ## Return a matrix that is the inverse of 'x'
-  inverse <- x$getInverse()
-
-  #If the inverse is already computed (i.e., its not NULL) then simply return it
-  if(!is.null(inverse)) {
-    message("getting cached data")
-    return(inverse)
-  }   
-  #We are here which means the inverse matrix is not computed - let's do it.
-  inverse <- solve(x$get(),...)
-  x$setInverse(inverse)
-  return(inverse)
-
-}
+    cacheSolve <- function(x,...) {
+    
+      ## Return a matrix that is the inverse of 'x'
+      inverse <- x$getInverse()
+    
+      #If the inverse is already computed (i.e., its not NULL) then simply return it
+      if(!is.null(inverse)) {
+        message("getting cached data")
+        return(inverse)
+      }   
+      #We are here which means the inverse matrix is not computed - let's do it.
+      inverse <- solve(x$get(),...)
+      x$setInverse(inverse)
+      return(inverse)
+    
+    }
 
 Finally the Test it function makes it easy to test the above two functions.
 
